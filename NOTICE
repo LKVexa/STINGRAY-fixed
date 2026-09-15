@@ -1,0 +1,19 @@
+STINGRAY v20 — multipart distribution
+Copyright (C) 2026 RUSSELL PHILIP SMITHSON
+
+The new standalone packaging utilities and distribution guides are licensed under
+the Apache License, Version 2.0. See LICENSE-APACHE-2.0.txt and LICENSE-SCOPE.md.
+This notice does not change any component's license.
+
+The combined STINGRAY application is AGPL-3.0-only, including World Monitor
+(copyright 2024–2026 Elie Habib). Its license, source and original notices are
+retained. See LICENSE-AGPL-3.0.txt and the application's THIRD-PARTY-NOTICES.md.
+
+TypeScript 5.9.3: Microsoft Corporation, Apache-2.0; original license and
+ThirdPartyNoticeText.txt retained. Node.js and npm include their own licenses
+and dependency notices. The JA21 corpora and WebView2 components retain their
+original license files and provenance. The Windows WebView2 Runtime and the
+Windows .NET Framework C# compiler are system prerequisites, not redistributed.
+
+This package is not affiliated with or endorsed by the Apache Software Foundation,
+Microsoft, the Node.js project, npm, World Monitor or traffic-data providers.

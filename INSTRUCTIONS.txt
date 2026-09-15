@@ -1,0 +1,56 @@
+STINGRAY v20 | COMMAND CENTER
+INSTRUCTION SHEET — Windows x64
+
+1. DOWNLOAD AND ASSEMBLE
+Download STINGRAY-v20-Start-Here.zip and every numbered part of the package
+you want. Each part is at most 24,000,000 bytes (24 decimal MB).
+Extract Start-Here.zip into the SAME folder as the numbered part files.
+The .cmd files and STINGRAY-parts.json must sit beside the .part001 files.
+Double-click Join-Portable.cmd, Join-Source.cmd, or Join-Both.cmd.
+The tool checks all parts and creates complete ZIPs in the assembled folder.
+Individual parts cannot be opened as ZIPs. Do not rename them or mix releases.
+If a part fails verification, replace only that part and run the join tool again.
+Existing matching ZIPs are reused; different files are never overwritten.
+
+2. RUN THE PORTABLE APPLICATION
+Right-click assembled/STINGRAY-v20-Portable.zip and choose Extract All.
+Use a writable, short path, such as D:\Codex\STINGRAY-v20.
+Open STINGRAY-v20-Portable and double-click Launch-STINGRAY.vbs.
+Microsoft Edge WebView2 Runtime is required. Node is already included.
+No application installer or administrator access is needed for portable mode.
+Keep the extracted folder together; do not run from inside the ZIP.
+Close the desktop window, then use Stop-STINGRAY.cmd to stop its local service.
+Settings, keys and history are created in STINGRAY/data. Back up that folder
+while the application is stopped. This package starts with an empty profile.
+
+3. USE THE COMMAND CENTER
+Use the top-right menu for air, land, sea, cameras, plugins and Connections.
+F11 toggles fullscreen; Escape leaves fullscreen. Ctrl+Shift+H collapses or
+expands the controls. Add your own provider credentials in Connections.
+Live feeds need internet access. Coverage and account limits vary by provider.
+Offline mode can show previously saved observations; it does not create live data.
+
+4. COMPILE THE SOURCE
+Extract assembled/STINGRAY-v20-Source-Compiler.zip to a short writable path.
+Open STINGRAY-v20-Source-Compiler and double-click Compile-JA21.cmd.
+It compiles the supported hosted JA21 modules and design tokens offline,
+then checks the generated TypeScript with the included TypeScript compiler.
+The actual JA21 compiler is in application/ja21/tools. This is a hosted subset,
+not a complete native JA21 VM. See application/ja21/PROFILE.md for its scope.
+TypeScript-Compiler.cmd --version confirms the separate TypeScript compiler.
+
+5. BUILD A COMPLETE NEW APPLICATION
+Install Python 3.10+ on PATH and have the Windows .NET Framework x64 C# compiler.
+Double-click Build-Application.cmd. It uses the bundled Node/npm tools,
+downloads both applications' locked dependencies, and compiles the complete app.
+This full build needs internet access and several GB of free disk space.
+Output is under application/release/STINGRAY-Windows-<timestamp>.
+The STINGRAY subfolder is portable; the surrounding folder also has an installer.
+Keep the corresponding-source archive and all licenses with redistributed builds.
+
+6. LICENSES AND HELP
+Read README.md, NOTICE and LICENSE-SCOPE.md. Apache 2.0 covers the new separate
+distribution tools; the integrated application retains AGPL-3.0-only.
+More guides: application/README.md (source) or guides/ (portable).
+If startup fails, inspect STINGRAY/data/server-error.log and confirm WebView2
+is installed. Feed credentials are not included in these packages.
